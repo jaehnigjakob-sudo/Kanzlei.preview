@@ -10,4 +10,4 @@ Mobile navigation supports expanded state, link selection and Escape. Without Ja
 
 ## Typography
 
-Self-hosted IBM Plex Sans (400, 500, 600) provides a consistent, restrained heading, navigation and body system. Font files are from the official IBM/plex repository, distributed under the included SIL Open Font License. No font requests are sent to Google or another font service. The user-uploaded logo remains unchanged.
+Self-hosted Oswald for headings and Figtree for navigation and body copy. These families were observed on Gleiss Lutz's website during the requested reference review. Open-source font files are from google/fonts; both SIL Open Font License files are included. No external font services are contacted. The original uploaded logo is unchanged.
