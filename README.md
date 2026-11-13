@@ -7,3 +7,7 @@ Serve the repository root with any static server or open `index.html`. GitHub Pa
 Names, qualifications, specialisms, dates and contact details come from the original firm website. No additional photography, quotations, testimonials or “Kontakt aufnehmen” call-to-action. Original imprint and full firm privacy notice remain linked; the local privacy page explains the preview's hosting.
 
 Mobile navigation supports expanded state, link selection and Escape. Without JavaScript navigation remains visible. Direct telephone/email links and an optional external Maps link are available. No tracking, cookies, embedded maps, external fonts or forms.
+
+## Typography
+
+Self-hosted IBM Plex Sans (400, 500, 600) provides a consistent, restrained heading, navigation and body system. Font files are from the official IBM/plex repository, distributed under the included SIL Open Font License. No font requests are sent to Google or another font service. The user-uploaded logo remains unchanged.
