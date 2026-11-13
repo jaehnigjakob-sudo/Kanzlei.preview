@@ -1,20 +1,9 @@
 # Kanzlei Jähnig · Website preview
 
-A responsive German redesign of https://kanzlei-jaehnig.de/ based on its published homepage, lawyer profile, tax consultant profile and contact details, retrieved 13 November 2026.
+Responsive, image-free German site for Kanzlei Jähnig. The original logo informs the grey serif typography, white background and fine orange rules. The wordmark is rendered with native text and CSS, not a bitmap.
 
-## Run
+Serve the repository root with any static server or open `index.html`. GitHub Pages uses `main` and `/ (root)`. No build or external dependencies.
 
-Serve this directory with any static server, or open `index.html` directly. No build or dependencies are required. Compatible with GitHub Pages served from `main` at `/ (root)`; all asset paths are relative.
+People, qualifications, specialisms, dates and contact details come from the original website, retrieved 13 November 2026. Profiles are factual third-person descriptions. No quotes, testimonials, photos or “Kontakt aufnehmen” call-to-action. The original imprint and firm privacy notice remain linked; the local privacy page explains the preview's hosting.
 
-## Content
-
-- All named people, qualifications, specialisms, dates and contact details come from the original website.
-- The original 15-year team tenure is retained as stated rather than recalculated.
-- Original portraits and reception photograph are locally hosted WebP crops. No generated or stock portraits.
-- The full original imprint and firm privacy notice remain directly linked. `datenschutz.html` also describes this preview's actual hosting and links to GitHub's privacy notice.
-- No invented office hours, testimonials, ratings, services or success statistics.
-- No analytics, cookies, embedded maps, remote fonts, forms, or third-party runtime dependencies.
-
-## Interactions
-
-Mobile navigation supports expanded state, link selection and Escape. Without JavaScript the navigation remains visible. Telephone, email and optional Google Maps links use the verified public contact details.
+Mobile navigation supports expanded state, link selection and Escape. Without JavaScript navigation remains visible. Contact uses direct telephone/email links and an optional external Maps link. No tracking, cookies, embedded maps, external fonts or forms.
