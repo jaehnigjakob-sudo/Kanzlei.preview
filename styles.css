@@ -1,6 +1,7 @@
 @font-face{font-family:'Libre Caslon Display';src:url('assets/fonts/LibreCaslonDisplay-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:'Figtree';src:url('assets/fonts/Figtree-Variable.ttf') format('truetype');font-style:normal;font-weight:300 900;font-display:swap}
-/* Brand-led editorial redesign: variance 4, motion 2, density 1. The original white logo remains unchanged. */
+/* Preserve the white Jähnig identity: DESIGN_VARIANCE 4, MOTION_INTENSITY 2,
+   VISUAL_DENSITY 2. Native CSS, existing self-hosted type and unchanged logo. */
 :root{color-scheme:light;--bg:#fff;--surface:#f3f5f4;--ink:#313b39;--body:#424b49;--muted:#65706c;--accent:#ee9e23;--secondary:#3b4642;--line:#e1e5e2;--space:clamp(1.5rem,5vw,5rem);--heading:'Libre Caslon Display',Georgia,'Times New Roman',serif;--sans:'Figtree',Arial,Helvetica,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:2rem}
@@ -18,21 +19,28 @@ h3{font-size:1.5rem}
 .skip{position:fixed;top:.5rem;left:.5rem;z-index:10;padding:.75rem 1rem;transform:translateY(-180%);background:var(--bg)}
 .skip:focus{transform:translateY(0)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.brand-masthead{position:relative;display:grid;place-items:center;min-height:25rem;padding:5rem 0;background:var(--bg)}
-.masthead-nav{position:absolute;top:2rem;left:0;right:0;display:flex;justify-content:flex-end;font-size:.8rem}
+.brand-masthead{position:relative;display:grid;place-items:center;min-height:18rem;padding:2.5rem 0;background:var(--bg)}
+.masthead-nav{position:absolute;top:1.5rem;left:0;right:0;display:flex;justify-content:flex-end;font-size:.8rem}
 .masthead-logo{display:block;width:min(82vw,1000px);margin-inline:auto;line-height:0}
 .masthead-logo img{display:block;width:100%;height:auto}
-.statement{position:relative;isolation:isolate;min-height:39rem;display:grid;align-items:center;overflow:hidden}
-.statement-photo,.statement-fade{position:absolute;inset:0;pointer-events:none}
-.statement-photo{z-index:-2;left:6%;display:flex;align-items:center;background:var(--bg)}
-.statement-photo img{display:block;width:100%;height:auto;object-fit:contain;object-position:center;mask-image:linear-gradient(to bottom,transparent 0%,transparent 18%,#000 35%,#000 62%,transparent 83%,transparent 100%)}
-.statement-fade{z-index:-1;background:linear-gradient(90deg,#fff 0%,#fffffff5 29%,#ffffff33 39%,#ffffff00 46%)}
-.statement-inner{position:relative;padding-block:5rem 6rem}
-.statement blockquote{margin:0;max-width:23rem}
-.statement blockquote p{font-family:var(--heading);font-size:clamp(2.5rem,3.35vw,3.5rem);font-weight:400;line-height:1.13;letter-spacing:-.025em;color:var(--ink);margin:0}
+.statement{position:relative;isolation:isolate}
+/* A taller, separately outpainted reception image provides photographic room
+   for the fades. The image is never stretched; faces retain their proportions. */
+.statement-photo{position:relative;width:min(100%,1600px);height:clamp(20rem,43vw,40rem);margin:-1.5rem auto 0;pointer-events:none;overflow:hidden}
+.statement-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 57%}
+/* Opaque white at both exact edges, with several stops for a gradual falloff.
+   The side fade also removes a frame edge on very wide displays. */
+.statement-photo::after{content:'';position:absolute;inset:-1px;background:linear-gradient(180deg,#fff 0%,#fffffff5 4%,#ffffffbd 12%,#ffffff4d 23%,#ffffff00 34%,#ffffff00 67%,#ffffff40 77%,#ffffffb8 89%,#fffffff5 97%,#fff 100%),linear-gradient(90deg,#fff 0%,#ffffff00 5%,#ffffff00 95%,#fff 100%)}
+.statement-inner{position:relative;margin-top:-2rem;padding-block:1.5rem 3rem;isolation:isolate}
+.quote-swoosh{position:absolute;inset:0;width:100%;height:100%;z-index:-1;fill:var(--accent);pointer-events:none}
+.statement blockquote{margin:0}
+.statement blockquote p{font-family:var(--heading);font-size:clamp(2rem,4.6vw,4rem);font-weight:400;line-height:1.22;letter-spacing:-.02em;color:var(--ink);margin:0}
+.quote-line{display:block;width:max-content;max-width:100%;white-space:nowrap;padding-block:.03em}
+.quote-line:nth-child(1){margin-left:56%}
+.quote-line:nth-child(2){margin-left:40%}
+.quote-line:nth-child(3){margin-left:24%}
+.quote-line:nth-child(4){margin-left:8%}
 .anchor-alias{position:absolute;top:0}
-.sweep-wrap{width:min(100% - var(--space)*2,1120px);margin:0 auto;position:relative;height:8rem}
-.brand-sweep{position:absolute;display:block;width:min(100%,940px);height:auto;right:0;top:-1.25rem}
 .contact{display:grid;grid-template-columns:1.7fr 1fr 1.2fr;align-items:end;gap:3rem;padding-block:4rem 6rem}
 .identity{display:grid;gap:2rem}
 .identity h3{font-size:2rem;line-height:1.15;margin-bottom:.35rem}
@@ -86,22 +94,20 @@ h3{font-size:1.5rem}
 .legal-heading h1{font-family:var(--heading);text-transform:none}
 .legal-content h2{font-family:var(--heading);font-size:1.9rem}
 .legal-content h3{font-family:var(--sans)}
-@media(max-width:1100px){
- .statement{min-height:0;display:block;padding-top:calc(56.25vw - 1.5rem)}
- .statement-photo{inset:0 0 auto;display:block;aspect-ratio:16/9}
- .statement-photo img{height:100%;object-fit:cover;object-position:62% center}
- .statement-fade{display:none}
- .statement-inner{padding-block:0 3rem}
- .statement blockquote{max-width:36rem}
-}
-@media(max-width:1023px){.brand-masthead{min-height:22rem}.contact{gap:2rem;grid-template-columns:1.4fr 1fr 1.2fr}.contact-direct{font-size:.82rem}.identity h3{font-size:1.85rem}}
+@media(max-width:1023px){.brand-masthead{min-height:15rem}.contact{gap:2rem;grid-template-columns:1.4fr 1fr 1.2fr}.contact-direct{font-size:.82rem}.identity h3{font-size:1.85rem}}
 @media(max-width:767px){
- .brand-masthead{min-height:17rem;padding:4rem 0}
- .masthead-nav{top:1.5rem}
+ .brand-masthead{min-height:11rem;padding:2.5rem 0}
+ .masthead-nav{top:1rem}
  .masthead-logo{width:92vw}
- .statement blockquote p{font-size:clamp(2.2rem,7.9vw,3.5rem);line-height:1.16}
- .sweep-wrap{height:5rem}
- .brand-sweep{top:0}
+ .statement-photo{height:auto;aspect-ratio:16/11;margin-top:-.75rem}
+ .statement-photo img{object-position:center 57%}
+ .statement-inner{margin-top:-1rem;padding-block:.75rem 2rem}
+ .statement blockquote p{font-size:clamp(1.5rem,6.4vw,2.6rem);line-height:1.3}
+ .quote-line:nth-child(1){margin-left:48%}
+ .quote-line:nth-child(2){margin-left:32%}
+ .quote-line:nth-child(3){margin-left:16%}
+ .quote-line:nth-child(4){margin-left:0}
+ .quote-swoosh{left:-3%;width:106%}
  .contact{grid-template-columns:1fr;gap:2rem;padding-block:3rem 4rem}
  .identity{grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:.5rem}
  .identity h3{font-size:1.65rem}
