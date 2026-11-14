@@ -18,9 +18,9 @@ h3{font-size:1.5rem}
 .skip{position:fixed;top:.5rem;left:.5rem;z-index:10;padding:.75rem 1rem;transform:translateY(-180%);background:var(--bg)}
 .skip:focus{transform:translateY(0)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.brand-masthead{position:relative;display:grid;place-items:center;min-height:25rem;padding:6rem 0 4rem;background:var(--bg)}
+.brand-masthead{position:relative;display:grid;place-items:center;min-height:25rem;padding:5rem 0;background:var(--bg)}
 .masthead-nav{position:absolute;top:2rem;left:0;right:0;display:flex;justify-content:flex-end;font-size:.8rem}
-.masthead-logo{display:block;width:min(82vw,1000px);line-height:0}
+.masthead-logo{display:block;width:min(82vw,1000px);margin-inline:auto;line-height:0}
 .masthead-logo img{display:block;width:100%;height:auto}
 .statement{position:relative;isolation:isolate;min-height:39rem;display:grid;align-items:center;overflow:hidden}
 .statement-photo,.statement-fade{position:absolute;inset:0;pointer-events:none}
@@ -50,6 +50,11 @@ h3{font-size:1.5rem}
 .brand{display:block;line-height:0;width:250px}
 .brand-logo{display:block;width:100%;height:auto}
 .header-inner nav{display:flex;gap:1.75rem;font-size:.8rem}
+/* Center the visible artwork. Source bounds including 8px breathing room:
+   x 109..1687, y 235..599 in the unchanged 1832x859 upload.
+   The crop center is 898,417; the file center itself is 916,429.5. */
+.logo-window{display:block;position:relative;width:79%;aspect-ratio:1578/364;margin-inline:auto;overflow:hidden}
+.logo-window>img{position:absolute;display:block;width:116.09632446%;max-width:none;height:auto;left:-6.90747782%;top:-64.56043956%}
 .imprint { padding-block: 3rem 5rem; }
 .legal-heading { padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .legal-back { font-size: .85rem; text-decoration: underline; text-underline-offset: .25em; }
@@ -91,7 +96,7 @@ h3{font-size:1.5rem}
 }
 @media(max-width:1023px){.brand-masthead{min-height:22rem}.contact{gap:2rem;grid-template-columns:1.4fr 1fr 1.2fr}.contact-direct{font-size:.82rem}.identity h3{font-size:1.85rem}}
 @media(max-width:767px){
- .brand-masthead{min-height:17rem;padding:5rem 0 3rem}
+ .brand-masthead{min-height:17rem;padding:4rem 0}
  .masthead-nav{top:1.5rem}
  .masthead-logo{width:92vw}
  .statement blockquote p{font-size:clamp(2.2rem,7.9vw,3.5rem);line-height:1.16}
