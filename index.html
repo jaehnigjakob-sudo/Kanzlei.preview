@@ -10,7 +10,7 @@
   <link rel="icon" href="data:,">
   <link rel="preload" href="assets/fonts/Figtree-Variable.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/fonts/Oswald-Variable.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="styles.css?v=dark-film-1">
+<link rel="stylesheet" href="styles.css?v=film-overlay-1">
   <script src="script.js" defer></script>
 </head>
 <body class="home">
@@ -27,12 +27,13 @@
   </div>
 </header>
 <main id="inhalt">
-  <section class="welcome container" aria-labelledby="hero-title">
-    <div class="welcome-copy"><p class="eyebrow">Kanzlei Jähnig · Rosenheim</p><h1 id="hero-title">Rechtsberatung.<br>Steuerberatung.</h1><p class="hero-intro">Max Jähnig, Rechtsanwalt und Fachanwalt für Miet- und Wohnungseigentumsrecht.<br>Sonja Jähnig, Steuerberaterin.</p></div>
-    <figure class="video-space" id="kanzleifilm" aria-label="Bereich für den zukünftigen Kanzleifilm">
-      <div class="video-placeholder"><span class="video-rule" aria-hidden="true"></span><p class="video-title">Einblicke in unsere Kanzlei</p><p class="video-status">Kanzleifilm · Video folgt</p></div>
-      <figcaption>Rechtsberatung und Steuerberatung in Rosenheim.</figcaption>
-    </figure>
+  <section class="welcome welcome-film" id="kanzleifilm" aria-labelledby="hero-title">
+    <div class="film-backdrop" aria-hidden="true"><!-- Reserved for the locally hosted Kanzlei video. --></div>
+    <div class="film-shade" aria-hidden="true"></div>
+    <div class="container welcome-content">
+      <div class="welcome-copy"><p class="eyebrow">Kanzlei Jähnig · Rosenheim</p><h1 id="hero-title">Rechtsberatung.<br>Steuerberatung.</h1><p class="hero-intro">Max Jähnig, Rechtsanwalt und Fachanwalt für Miet- und Wohnungseigentumsrecht.<br>Sonja Jähnig, Steuerberaterin.</p></div>
+      <p class="film-caption">Kanzleifilm · Video folgt</p>
+    </div>
   </section>
   <section class="container about section" id="kanzlei" aria-labelledby="kanzlei-title">
     <h2 id="kanzlei-title">Die Kanzlei</h2>
