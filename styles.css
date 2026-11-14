@@ -31,7 +31,7 @@ h3{font-size:1.5rem}
 /* Opaque white at both exact edges, with several stops for a gradual falloff.
    The side fade also removes a frame edge on very wide displays. */
 .statement-photo::after{content:'';position:absolute;inset:-1px;background:linear-gradient(180deg,#fff 0%,#fffffff5 4%,#ffffffbd 12%,#ffffff4d 23%,#ffffff00 34%,#ffffff00 67%,#ffffff40 77%,#ffffffb8 89%,#fffffff5 97%,#fff 100%),linear-gradient(90deg,#fff 0%,#ffffff00 5%,#ffffff00 95%,#fff 100%)}
-.statement-inner{position:relative;margin-top:-1rem;padding-block:1.5rem 3rem;isolation:isolate}
+.statement-inner{position:relative;margin-top:-1rem;padding-block:2.25rem 3rem;isolation:isolate}
 /* Keep the artwork unchanged and at its intrinsic 1000:140 ratio.
    The complete sentence follows normal reading order; the curve accents
    the final phrase without crossing any letters. */
@@ -43,7 +43,7 @@ h3{font-size:1.5rem}
 .anchor-alias{position:absolute;top:0}
 .contact{display:grid;grid-template-columns:1.7fr 1fr 1.2fr;align-items:end;gap:3rem;padding-block:4rem 6rem}
 .identity{display:grid;gap:2rem}
-.identity h3{font-size:2rem;line-height:1.15;margin-bottom:.35rem}
+.identity h3{font-family:var(--sans);font-size:2rem;line-height:1.15;margin-bottom:.35rem}
 .identity p{font-size:.85rem;color:var(--muted);margin:0}
 .contact-address{font-size:.9rem}
 .contact-address address{font-style:normal}
@@ -101,7 +101,7 @@ h3{font-size:1.5rem}
  .masthead-logo{width:92vw}
  .statement-photo{height:auto;aspect-ratio:16/11;margin-top:0}
  .statement-photo img{object-position:center 57%}
- .statement-inner{margin-top:0;padding-block:.5rem 2rem}
+ .statement-inner{margin-top:0;padding-block:1rem 2rem}
  .contact{grid-template-columns:1fr;gap:2rem;padding-block:3rem 4rem}
  .identity{grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:.5rem}
  .identity h3{font-size:1.65rem}
