@@ -25,3 +25,25 @@ if (toggle && navigation) {
     }
   });
 }
+
+const intro = document.querySelector('.brand-intro');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (intro) {
+  let framePending = false;
+  function updateIntroFade() {
+    const distance = Math.max(intro.offsetHeight * 0.75, 1);
+    const progress = motionPreference.matches ? 0 : Math.min(1, Math.max(0, window.scrollY / distance));
+    intro.style.setProperty('--intro-opacity', String(1 - progress));
+    framePending = false;
+  }
+  function requestIntroFrame() {
+    if (!framePending) {
+      framePending = true;
+      window.requestAnimationFrame(updateIntroFade);
+    }
+  }
+  window.addEventListener('scroll', requestIntroFrame, { passive: true });
+  window.addEventListener('resize', requestIntroFrame);
+  motionPreference.addEventListener('change', requestIntroFrame);
+  updateIntroFade();
+}
