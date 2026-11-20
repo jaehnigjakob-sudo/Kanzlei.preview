@@ -20,17 +20,18 @@ h3{font-size:1.5rem}
 .skip:focus{transform:translateY(0)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .brand-masthead{position:relative;display:grid;place-items:center;min-height:22rem;padding:5rem 0;background:var(--bg)}
-.masthead-nav{position:absolute;top:1.5rem;left:0;right:0;display:flex;justify-content:flex-end;font-size:.8rem}
+.masthead-nav a{display:inline-flex;align-items:center;min-height:44px;padding-inline:.5rem}
+.masthead-nav{position:absolute;top:1.5rem;left:0;right:0;display:flex;justify-content:flex-end;font-size:.875rem}
 .masthead-logo{display:block;width:min(82vw,1000px);margin-inline:auto;line-height:0}
 .masthead-logo img{display:block;width:100%;height:auto}
 .statement{position:relative;isolation:isolate}
 /* Show the full reception photograph at its natural ratio, with a quieter
    footprint and room around the people on every screen size. */
-.statement-photo{position:relative;width:min(92%,1120px);height:auto;aspect-ratio:16/9;margin:0 auto;pointer-events:none;overflow:hidden}
-.statement-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.statement-photo{position:relative;width:min(92%,1120px);height:auto;margin:0 auto;pointer-events:none;overflow:hidden}
+.statement-photo img{display:block;width:100%;height:auto}
 /* Opaque white at both exact edges, with several stops for a gradual falloff.
    The side fade also removes a frame edge on very wide displays. */
-.statement-photo::after{content:'';position:absolute;inset:-1px;background:linear-gradient(180deg,#fff 0%,#fffffff5 4%,#ffffffbd 12%,#ffffff4d 23%,#ffffff00 34%,#ffffff00 67%,#ffffff40 77%,#ffffffb8 89%,#fffffff5 97%,#fff 100%),linear-gradient(90deg,#fff 0%,#ffffff00 5%,#ffffff00 95%,#fff 100%)}
+.statement-photo::after{content:'';position:absolute;inset:-1px;background:linear-gradient(180deg,#fff 0%,#ffffffd9 4%,#ffffff73 13%,#ffffff00 24%,#ffffff00 79%,#ffffff66 88%,#ffffffe6 96%,#fff 100%),linear-gradient(90deg,#fff 0%,#ffffff00 5%,#ffffff00 95%,#fff 100%)}
 .statement-inner{position:relative;margin-top:-1rem;padding-block:2.25rem 3rem;isolation:isolate}
 /* Keep the artwork unchanged and at its intrinsic 1000:140 ratio.
    The complete sentence follows normal reading order; the curve accents
@@ -41,23 +42,24 @@ h3{font-size:1.5rem}
 .quote-finish{position:relative;display:inline-block;max-width:100%;margin-top:.1em;padding-bottom:1.3em;font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.18;isolation:isolate}
 .quote-swoosh{position:absolute;left:-6%;bottom:0;display:block;width:112%;max-width:none;height:auto;z-index:-1;pointer-events:none}
 .anchor-alias{position:absolute;top:0}
-.contact{display:grid;grid-template-columns:1.7fr 1fr 1.2fr;align-items:end;gap:3rem;padding-block:4rem 6rem}
+.contact{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,1.2fr);align-items:end;gap:3rem;padding-block:4rem 6rem}
 .identity{display:grid;gap:2rem}
 .identity h3{font-family:var(--sans);font-size:2rem;line-height:1.15;margin-bottom:.35rem}
-.identity p{font-size:.85rem;color:var(--muted);margin:0}
+.identity p{font-size:.875rem;color:var(--muted);margin:0}
 .contact-address{font-size:.9rem}
 .contact-address address{font-style:normal}
 .contact-direct{display:flex;flex-direction:column;gap:.35rem;font-size:.9rem;min-width:0}
 .contact-direct a{overflow-wrap:anywhere}
 .contact-direct a:first-child{font-size:1.1rem}
-.footer{padding-block:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;color:var(--muted);font-size:.75rem}
+.footer{padding-block:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;color:var(--muted);font-size:.875rem}
 .footer nav{display:flex;gap:1.5rem}
+.footer nav a,.header-inner nav a{display:inline-flex;align-items:center;min-height:44px}
 .footer [aria-current='page']{text-decoration:underline;text-underline-offset:.3em}
 .site-header{background:var(--bg)}
 .header-inner{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .brand{display:block;line-height:0;width:250px}
 .brand-logo{display:block;width:100%;height:auto}
-.header-inner nav{display:flex;gap:1.75rem;font-size:.8rem}
+.header-inner nav{display:flex;gap:1.75rem;font-size:.875rem}
 /* Center the visible artwork. Source bounds including 8px breathing room:
    x 109..1687, y 235..599 in the unchanged 1832x859 upload.
    The crop center is 898,417; the file center itself is 916,429.5. */
@@ -65,14 +67,14 @@ h3{font-size:1.5rem}
 .logo-window>img{position:absolute;display:block;width:116.09632446%;max-width:none;height:auto;left:-6.90747782%;top:-64.56043956%}
 .imprint { padding-block: 3rem 5rem; }
 .legal-heading { padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
-.legal-back { font-size: .85rem; text-decoration: underline; text-underline-offset: .25em; }
+.legal-back { font-size: .875rem; text-decoration: underline; text-underline-offset: .25em; }
 .legal-heading h1 { margin-top: 1.5rem; font-size: 2.8rem; }
 .legal-heading h1.privacy-title { font-size: clamp(1.8rem, 5.8vw, 2.8rem); hyphens: auto; overflow-wrap: anywhere; }
 .legal-heading p { margin: .75rem 0 0; color: var(--muted); }
 .legal-layout { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 3rem; padding-top: 3rem; }
-.legal-index { display: flex; flex-direction: column; gap: .75rem; align-self: start; position: sticky; top: 9rem; font-size: .85rem; }
+.legal-index { display: flex; flex-direction: column; gap: .75rem; align-self: start; position: sticky; top: 9rem; font-size: .875rem; }
 .legal-index a { color: var(--secondary); }
-.legal-content { max-width: 46rem; min-width: 0; }
+.legal-content { max-width: 46rem; min-width: 0; hyphens: auto; overflow-wrap: anywhere; }
 .legal-content section + section { margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
 .legal-content h2 { font-size: 1.6rem; margin-bottom: 1.25rem; }
 .legal-content h3 { font-size: 1.05rem; margin: 1.25rem 0 .65rem; font-weight: 500; }
@@ -94,16 +96,22 @@ h3{font-size:1.5rem}
 .legal-heading h1{font-family:var(--heading);text-transform:none}
 .legal-content h2{font-family:var(--heading);font-size:1.9rem}
 .legal-content h3{font-family:var(--sans)}
-@media(max-width:1023px){.brand-masthead{min-height:18.5rem;padding-block:4rem}.contact{gap:2rem;grid-template-columns:1.4fr 1fr 1.2fr}.contact-direct{font-size:.82rem}.identity h3{font-size:1.85rem}}
+/* Tablet portrait and landscape: names share a row; address and direct
+   contact sit beneath them instead of squeezing into three narrow columns. */
+@media(min-width:768px) and (max-width:1099px){
+ .brand-masthead{min-height:18.5rem;padding-block:4rem}
+ .contact{gap:2rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .identity{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .identity h3{font-size:1.85rem}
+}
 @media(max-width:767px){
  .brand-masthead{min-height:14rem;padding:3.25rem 0}
  .masthead-nav{top:1rem}
  .masthead-logo{width:92vw}
- .statement-photo{height:auto;aspect-ratio:16/9;margin-top:0}
- .statement-photo img{object-position:center}
+ .statement-photo{margin-top:0}
  .statement-inner{margin-top:0;padding-block:1rem 2rem}
  .contact{grid-template-columns:1fr;gap:2rem;padding-block:3rem 4rem}
- .identity{grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:.5rem}
+ .identity{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-bottom:.5rem}
  .identity h3{font-size:1.65rem}
  .contact-direct{font-size:.9rem}
  .footer{align-items:flex-start;gap:1rem}
@@ -120,4 +128,11 @@ h3{font-size:1.5rem}
  .imprint-details>div{grid-template-columns:5rem 1fr;gap:.5rem}
 }
 @media(max-width:380px){.identity{grid-template-columns:1fr;gap:1.5rem}.footer{flex-wrap:wrap}}
+/* Keep the image and branding restrained on a phone held sideways. */
+@media(orientation:landscape) and (max-height:500px) and (max-width:1000px){
+ .brand-masthead{min-height:10rem;padding-block:2.5rem}
+ .masthead-logo{width:min(66vw,34rem)}
+ .statement-photo{width:min(88%,42rem)}
+ .statement-inner{padding-block:1rem 2rem}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
