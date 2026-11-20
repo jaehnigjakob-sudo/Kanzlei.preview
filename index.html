@@ -10,7 +10,7 @@
 <link rel="icon" href="data:,">
 <link rel="preload" href="assets/fonts/LibreCaslonDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="assets/fonts/Figtree-Variable.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="styles.css?v=responsive-reception-7">
+<link rel="stylesheet" href="styles.css?v=fullwidth-white-8">
 </head>
 <body class="home">
 <a class="skip" href="#inhalt">Zum Inhalt</a>
@@ -22,7 +22,12 @@
   <h1 class="sr-only">Kanzlei Jähnig</h1>
   <section class="statement" id="kanzlei" aria-label="Unser Anspruch">
     <span id="kanzleifilm" class="anchor-alias" aria-hidden="true"></span>
-    <div class="statement-photo"><img src="assets/kanzlei-empfang-raum.webp" width="1582" height="994" alt="Sonja und Max Jähnig am Empfang der Kanzlei" fetchpriority="high"></div>
+    <div class="statement-photo">
+      <picture>
+        <source media="(min-width:1000px), (orientation:landscape) and (max-height:500px)" srcset="assets/kanzlei-empfang-weiss-breit.webp" width="1942" height="809">
+        <img src="assets/kanzlei-empfang-weiss.webp" width="1582" height="994" alt="Sonja und Max Jähnig am Empfang der Kanzlei" fetchpriority="high">
+      </picture>
+    </div>
     <div class="statement-inner container">
       <blockquote><p><span class="quote-intro">„Wenn ich keine Lösung für ein Problem finde,</span> <span class="quote-finish">dann gibt es keine.“<img class="quote-swoosh" src="assets/brand-swoosh.svg" width="1000" height="140" alt="" aria-hidden="true"></span></p></blockquote>
     </div>

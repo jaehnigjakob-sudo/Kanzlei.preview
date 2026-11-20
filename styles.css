@@ -25,13 +25,13 @@ h3{font-size:1.5rem}
 .masthead-logo{display:block;width:min(82vw,1000px);margin-inline:auto;line-height:0}
 .masthead-logo img{display:block;width:100%;height:auto}
 .statement{position:relative;isolation:isolate}
-/* Show the full reception photograph at its natural ratio, with a quieter
-   footprint and room around the people on every screen size. */
-.statement-photo{position:relative;width:min(92%,1120px);height:auto;margin:0 auto;pointer-events:none;overflow:hidden}
+/* Full-width photography: portrait screens retain the environmental frame;
+   wide screens use a roomier image through picture art direction. */
+.statement-photo{position:relative;width:100%;height:auto;margin:0;pointer-events:none;overflow:hidden}
+.statement-photo picture{display:block}
 .statement-photo img{display:block;width:100%;height:auto}
-/* Opaque white at both exact edges, with several stops for a gradual falloff.
-   The side fade also removes a frame edge on very wide displays. */
-.statement-photo::after{content:'';position:absolute;inset:-1px;background:linear-gradient(180deg,#fff 0%,#ffffffd9 4%,#ffffff73 13%,#ffffff00 24%,#ffffff00 79%,#ffffff66 88%,#ffffffe6 96%,#fff 100%),linear-gradient(90deg,#fff 0%,#ffffff00 5%,#ffffff00 95%,#fff 100%)}
+/* Only vertical transitions: the photograph reaches both viewport edges. */
+.statement-photo::after{content:'';position:absolute;inset:-1px 0;background:linear-gradient(180deg,#fff 0%,#ffffffe6 4%,#ffffff80 12%,#ffffff00 24%,#ffffff00 80%,#ffffff33 86%,#ffffffa6 94%,#fff 100%)}
 .statement-inner{position:relative;margin-top:-1rem;padding-block:2.25rem 3rem;isolation:isolate}
 /* Keep the artwork unchanged and at its intrinsic 1000:140 ratio.
    The complete sentence follows normal reading order; the curve accents
@@ -132,7 +132,12 @@ h3{font-size:1.5rem}
 @media(orientation:landscape) and (max-height:500px) and (max-width:1000px){
  .brand-masthead{min-height:10rem;padding-block:2.5rem}
  .masthead-logo{width:min(66vw,34rem)}
- .statement-photo{width:min(88%,42rem)}
  .statement-inner{padding-block:1rem 2rem}
+}
+/* Limit the vertical footprint on very wide monitors without side margins. */
+@media(min-width:2305px){
+ .statement-photo{height:60rem}
+ .statement-photo picture,.statement-photo img{height:100%}
+ .statement-photo img{object-fit:cover;object-position:center 60%}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
