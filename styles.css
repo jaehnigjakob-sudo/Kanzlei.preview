@@ -24,10 +24,10 @@ h3{font-size:1.5rem}
 .masthead-logo{display:block;width:min(82vw,1000px);margin-inline:auto;line-height:0}
 .masthead-logo img{display:block;width:100%;height:auto}
 .statement{position:relative;isolation:isolate}
-/* A taller, separately outpainted reception image provides photographic room
-   for the fades. The image is never stretched; faces retain their proportions. */
-.statement-photo{position:relative;width:min(100%,1600px);height:clamp(20rem,43vw,40rem);margin:0 auto;pointer-events:none;overflow:hidden}
-.statement-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 57%}
+/* Show the full reception photograph at its natural ratio, with a quieter
+   footprint and room around the people on every screen size. */
+.statement-photo{position:relative;width:min(92%,1120px);height:auto;aspect-ratio:16/9;margin:0 auto;pointer-events:none;overflow:hidden}
+.statement-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
 /* Opaque white at both exact edges, with several stops for a gradual falloff.
    The side fade also removes a frame edge on very wide displays. */
 .statement-photo::after{content:'';position:absolute;inset:-1px;background:linear-gradient(180deg,#fff 0%,#fffffff5 4%,#ffffffbd 12%,#ffffff4d 23%,#ffffff00 34%,#ffffff00 67%,#ffffff40 77%,#ffffffb8 89%,#fffffff5 97%,#fff 100%),linear-gradient(90deg,#fff 0%,#ffffff00 5%,#ffffff00 95%,#fff 100%)}
@@ -99,8 +99,8 @@ h3{font-size:1.5rem}
  .brand-masthead{min-height:14rem;padding:3.25rem 0}
  .masthead-nav{top:1rem}
  .masthead-logo{width:92vw}
- .statement-photo{height:auto;aspect-ratio:16/11;margin-top:0}
- .statement-photo img{object-position:center 57%}
+ .statement-photo{height:auto;aspect-ratio:16/9;margin-top:0}
+ .statement-photo img{object-position:center}
  .statement-inner{margin-top:0;padding-block:1rem 2rem}
  .contact{grid-template-columns:1fr;gap:2rem;padding-block:3rem 4rem}
  .identity{grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:.5rem}
